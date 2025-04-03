@@ -165,11 +165,14 @@
             <div class="contact-wrapper">
                 <div class="contact-form">
                     <h3>Professional Consultation Inquiry</h3>
-                    <form id="contactForm" action="https://formsubmit.co/djscompliance@outlook.com" method="POST">
-                        <input type="hidden" name="_subject" value="New Compliance Inquiry">
+                    <form action="https://formsubmit.co/djscompliance@outlook.com" method="POST">
+                        <!-- Add these hidden inputs for FormSubmit configuration -->
+                        <input type="hidden" name="_next" value="https://djscompliance.com.au/thank-you.html">
+                        <input type="hidden" name="_subject" value="New Consultation Request">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="thank-you.html">
+                        
+                        <!-- Rest of your form fields -->
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
                         </div>
