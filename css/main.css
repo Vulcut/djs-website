@@ -1,0 +1,79 @@
+:root {
+    /* Add new variables */
+    --section-spacing: 8rem;
+    --card-spacing: 2rem;
+    --hero-padding: 6rem 0;
+}
+
+/* Add spacing consistency */
+section {
+    padding: var(--section-spacing) 0;
+    position: relative;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+/* Improve hero section */
+#hero {
+    padding: var(--hero-padding);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin: 2rem 0;
+}
+
+/* Fix bento grid alignment */
+.service-grid {
+    margin: 4rem auto;
+    max-width: 1400px;
+    padding: 0 2rem;
+}
+
+.service-card {
+    margin-bottom: var(--card-spacing);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Add consistent card content styling */
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Improve mobile experience */
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 4rem;
+        --hero-padding: 4rem 0;
+    }
+    
+    .service-card {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
